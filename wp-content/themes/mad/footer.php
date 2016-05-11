@@ -1,7 +1,9 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: HOME
- * Date: 5/7/2016
- * Time: 5:22 PM
- */
+    <footer id="footer">
+        <div class="copyright">
+            &copy<?php echo date('Y'); ?> - <?php bloginfo('sitename'); ?>
+        </div>
+    </footer>
+    </div>
+<?php wp_footer(); ?>
+</body>
+</html>
