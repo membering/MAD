@@ -87,3 +87,21 @@ if (!function_exists('mad_menu')) {
         wp_nav_menu($menu);
     }
 }
+
+if (!function_exists('mad_pagination')) {
+    function mad_pagination() {
+        if ($GLOBALS['wp_query']->get_num_pages < 2) {
+            return '';
+        }
+        ?>
+        <nav class="pagination" role="navigation">
+        <?php if (get_next_post_link()) : ?>
+            <div class="prev"><?php next_posts_link( __('Older Posts', 'mad') ); ?></div>
+        <?php endif; ?>
+        <?php if (get_previous_post_link()) : ?>
+            <div class="next"><?php previous_posts_link( __('Newer Posts', 'mad') ); ?></div>
+        <?php endif; ?>
+        </nav>
+        <?php
+    }
+}
