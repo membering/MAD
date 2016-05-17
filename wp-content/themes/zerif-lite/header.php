@@ -124,8 +124,21 @@ wp_head(); ?>
 			<nav class="navbar-collapse bs-navbar-collapse collapse" role="navigation"   id="site-navigation">
 				<a class="screen-reader-text skip-link" href="#content"><?php _e( 'Skip to content', 'zerif-lite' ); ?></a>
 				<?php wp_nav_menu( array('theme_location' => 'primary', 'container' => false, 'menu_class' => 'nav navbar-nav navbar-right responsive-nav main-nav-list', 'fallback_cb'     => 'zerif_wp_page_menu')); ?>
-			</nav>
 
+				<?php
+
+				$zerif_socials_facebook = get_theme_mod('zerif_socials_facebook','#');
+				$zerif_socials_twitter = get_theme_mod('zerif_socials_twitter','#');
+				$zerif_socials_linkedin = get_theme_mod('zerif_socials_linkedin','#');
+				$zerif_socials_behance = get_theme_mod('zerif_socials_behance','#');
+				$zerif_socials_dribbble = get_theme_mod('zerif_socials_dribbble','#');
+				$zerif_socials_instagram = get_theme_mod('zerif_socials_instagram');
+
+				?>
+				<ul class="social">
+					<li><a target="_blank" href="<?php esc_url($zerif_socials_facebook); ?>"><i class="fa fa-facebook"></i></a></li>
+				</ul>
+			</nav>
 		</div>
 
 	</div>
