@@ -73,7 +73,8 @@ if (!function_exists('mad_header')) {
             }
             ?>
         </div>
-        <div class="site-description"><?php bloginfo('description'); ?></div><?php
+        <div class="site-description"><?php bloginfo('description'); ?></div>
+        <?php
     }
 }
 
@@ -90,9 +91,9 @@ if (!function_exists('mad_menu')) {
 
 if (!function_exists('mad_pagination')) {
     function mad_pagination() {
-        if ($GLOBALS['wp_query']->get_num_pages < 2) {
-            return '';
-        }
+//        if ($GLOBALS['wp_query']->get_num_pages < 2) {
+//            return '';
+//        }
         ?>
         <nav class="pagination" role="navigation">
         <?php if (get_next_post_link()) : ?>
