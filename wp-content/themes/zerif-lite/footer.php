@@ -45,6 +45,9 @@
 		$zerif_phone = get_theme_mod('zerif_phone','<a href="tel:0 332 548 954">0 332 548 954</a>');
 		$zerif_phone_icon = get_theme_mod('zerif_phone_icon',get_template_directory_uri().'/images/telephone65-blue.png');
 
+		$zerif_fax = get_theme_mod('zerif_fax','<a href="tel:0 332 548 954">0 332 548 954</a>');
+		$zerif_fax_icon = get_theme_mod('zerif_fax_icon',get_template_directory_uri().'/images/telephone65-blue.png');
+
 		$zerif_socials_facebook = get_theme_mod('zerif_socials_facebook','#');
 		$zerif_socials_twitter = get_theme_mod('zerif_socials_twitter','#');
 		$zerif_socials_linkedin = get_theme_mod('zerif_socials_linkedin','#');
@@ -93,14 +96,19 @@
 
 			echo '<div class="col-md-9 company-details">';
 			if( !empty($zerif_address) ) {
-				echo wp_kses_post( $zerif_address );
+				echo '<span>' . wp_kses_post( $zerif_address ) . '</span>';
 			} else if( isset( $wp_customize ) ) {
 				echo '<div class="zerif-footer-address zerif_hidden_if_not_customizer"></div>';
 			}
 			if( !empty($zerif_phone) ) {
-				echo wp_kses_post( $zerif_phone );
+				echo '<span>' . wp_kses_post( $zerif_phone ) . '</span>';
 			} else if( isset( $wp_customize ) ) {
 				echo '<div class="zerif-footer-phone zerif_hidden_if_not_customizer"></div>';
+			}
+			if( !empty($zerif_fax) ) {
+				echo '<span>' . wp_kses_post( $zerif_fax ) . '</span>';
+			} else if( isset( $wp_customize ) ) {
+				echo '<div class="zerif-footer-fax zerif_hidden_if_not_customizer"></div>';
 			}
 			echo '</div>';
 

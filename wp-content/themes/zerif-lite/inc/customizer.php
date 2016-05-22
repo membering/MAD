@@ -333,7 +333,31 @@ function zerif_customize_register( $wp_customize ) {
 			'section' => 'zerif_general_footer_section',
 			'priority' => 14
 		)));
-	
+
+		/* fax number - ICON */
+		$wp_customize->add_setting( 'zerif_fax_icon', array(
+			'sanitize_callback' => 'esc_url_raw',
+			'default' => get_template_directory_uri().'/images/telephone65-blue.png'
+		));
+
+		$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'zerif_fax_icon', array(
+			'label'    => __( 'Fax number section - icon', 'zerif-lite' ),
+			'section'  => 'zerif_general_footer_section',
+			'priority' => 13,
+		)));
+
+		/* phone number */
+		$wp_customize->add_setting( 'zerif_fax', array(
+			'sanitize_callback' => 'zerif_sanitize_number',
+			'default' => '<a href="fax:0 332 548 954">0 332 548 954</a>',
+		));
+
+		$wp_customize->add_control(new Zerif_Customize_Textarea_Control( $wp_customize, 'zerif_fax', array(
+			'label'   => __( 'Fax number', 'zerif-lite' ),
+			'section' => 'zerif_general_footer_section',
+			'priority' => 14
+		)));
+
 	else: /* Old versions of WordPress */
 	
 		$wp_customize->add_section( 'zerif_general_section' , array(

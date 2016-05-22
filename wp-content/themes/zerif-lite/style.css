@@ -997,7 +997,7 @@ a:active {
 .sticky {
 }
 .hentry {
-	margin: 0 0 1.5em;
+	/*margin: 0 0 1.5em;*/
 }
 .byline,
 .updated {
@@ -2988,6 +2988,9 @@ width: -webkit-calc(100% / 4);
 	font-size: 30px;
 	margin-bottom: 10px;
 }
+.company-details span {
+	padding-left: 10px;
+}
 .copyright {
 	padding-top: 68px;
 	padding-bottom: 68px;
@@ -3142,9 +3145,9 @@ width: -webkit-calc(100% / 4);
 article.hentry{
 	float: left;
 	width: 100%;
-	margin-bottom: 30px;
-	padding-bottom: 30px;
-	border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+	/*margin-bottom: 30px;*/
+	/*padding-bottom: 30px;*/
+	/*border-bottom: 1px solid rgba(0, 0, 0, 0.05);*/
 }
 article.sticky{
 	background: #f9f9f9;
@@ -3182,7 +3185,7 @@ article .posted-on a:hover{
 	clear: both;
 }
 .content-left-wrap{
-	padding-top: 60px;
+	/*padding-top: 60px;*/
 }
 .sidebar-wrap.content-left-wrap{
 	margin-top: 60px;
@@ -3296,7 +3299,7 @@ article .posted-on a:hover{
 	text-align: justify;
 }
 .entry-content{
-	margin: 1em 0 0;
+	margin: 0;
 }
 .row{
     float: left;
@@ -6162,7 +6165,38 @@ body.custom-background {
     color: #666;
 }
 
+.nivo-controlNav {
+	position: absolute;
+	left: 98%;
+	top: 40%;
+}
 
+.nivo-caption {
+	height: 100%;
+	text-align: center;
+	padding-top: 15% !important;
+}
+
+.nivo-caption span {
+	font-family: 'Roboto', sans-serif;
+	font-size: 60px;
+	font-weight: 300;
+	text-transform: uppercase;
+	color: #EEEEEE;
+	line-height: 70px;
+}
+
+.nivo-caption span.bold {
+	font-weight: 700;
+}
+
+.nivo-caption p {
+	font-family: 'Roboto', sans-serif;
+	font-size: 36px;
+	font-weight: 300;
+	text-align: center;
+	line-height: 70px;
+}
 
 /* print */
 @media print {
